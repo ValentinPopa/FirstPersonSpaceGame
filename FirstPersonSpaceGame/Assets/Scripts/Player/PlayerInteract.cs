@@ -34,7 +34,6 @@ public class PlayerInteract : MonoBehaviour
                 playerUI.UpdateText(interactable.promptMessage);
                 if (inputManager.onFoot.Interact.triggered)
                 {
-                    Debug.Log("eu apas");
                     interactable.BaseInteract();
                 }
             }

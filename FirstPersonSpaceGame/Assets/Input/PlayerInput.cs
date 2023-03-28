@@ -80,6 +80,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FindObjects"",
+                    ""type"": ""Button"",
+                    ""id"": ""fe643db8-8f8a-47a5-9a78-cde649362c19"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -300,6 +309,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c9c7a228-5841-4376-b7f8-53d5ec630bf4"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FindObjects"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -832,6 +852,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_OnFoot_Sprint = m_OnFoot.FindAction("Sprint", throwIfNotFound: true);
         m_OnFoot_Crouch = m_OnFoot.FindAction("Crouch", throwIfNotFound: true);
         m_OnFoot_Interact = m_OnFoot.FindAction("Interact", throwIfNotFound: true);
+        m_OnFoot_FindObjects = m_OnFoot.FindAction("FindObjects", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -909,6 +930,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_Sprint;
     private readonly InputAction m_OnFoot_Crouch;
     private readonly InputAction m_OnFoot_Interact;
+    private readonly InputAction m_OnFoot_FindObjects;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -919,6 +941,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Sprint => m_Wrapper.m_OnFoot_Sprint;
         public InputAction @Crouch => m_Wrapper.m_OnFoot_Crouch;
         public InputAction @Interact => m_Wrapper.m_OnFoot_Interact;
+        public InputAction @FindObjects => m_Wrapper.m_OnFoot_FindObjects;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -946,6 +969,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Interact.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnInteract;
+                @FindObjects.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnFindObjects;
+                @FindObjects.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnFindObjects;
+                @FindObjects.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnFindObjects;
             }
             m_Wrapper.m_OnFootActionsCallbackInterface = instance;
             if (instance != null)
@@ -968,6 +994,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @FindObjects.started += instance.OnFindObjects;
+                @FindObjects.performed += instance.OnFindObjects;
+                @FindObjects.canceled += instance.OnFindObjects;
             }
         }
     }
@@ -1085,6 +1114,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnFindObjects(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
