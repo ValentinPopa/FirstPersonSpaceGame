@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DroneFollowing",
+                    "type": "Button",
+                    "id": "6755faa3-1e42-4067-8514-9401ad53056c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -298,6 +307,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "FindObjects",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa7e53a0-e9ca-4f73-9d1c-a34fa8622206",
+                    "path": "<Keyboard>/period",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DroneFollowing",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

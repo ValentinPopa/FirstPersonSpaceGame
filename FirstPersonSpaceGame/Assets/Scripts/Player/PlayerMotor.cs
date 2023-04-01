@@ -6,6 +6,8 @@ public class PlayerMotor : MonoBehaviour
 {
     private CharacterController controller;
     private Vector3 playerVelocity;
+
+    private GroundDroneMotor groundDroneMotor;
     public float speed = 5f;
     private bool isGrounded;
     public float gravity = -9.8f;
@@ -18,6 +20,7 @@ public class PlayerMotor : MonoBehaviour
     void Start()
     {
         controller=GetComponent<CharacterController>();
+        groundDroneMotor= gameObject.AddComponent<GroundDroneMotor>();
     }
 
     // Update is called once per frame
@@ -56,6 +59,7 @@ public class PlayerMotor : MonoBehaviour
         }
 
         controller.Move(playerVelocity * Time.deltaTime);
+
     }
     public void Jump()
     {
