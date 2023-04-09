@@ -4,14 +4,14 @@ using UnityEngine.AI;
 public class GroundDroneMotorAI : MonoBehaviour
 {
     public GameObject player;
-    private NavMeshAgent navMeshAgent;
+    private NavMeshAgent groundDroneNavMeshAgent;
     public Transform treeObject;
     private const float minDistance = 2f;
     
 
     void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        groundDroneNavMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     public void FollowPlayer()
@@ -23,11 +23,11 @@ public class GroundDroneMotorAI : MonoBehaviour
         {
             // Calculate a destination away from the player
             Vector3 destination = transform.position - directionToPlayer.normalized * (minDistance - distanceToPlayer);
-            navMeshAgent.SetDestination(destination);
+            groundDroneNavMeshAgent.SetDestination(destination);
         }
         else
         {
-            navMeshAgent.SetDestination(player.transform.position);
+            groundDroneNavMeshAgent.SetDestination(player.transform.position);
         }
     }
     public void FindTree()
@@ -51,7 +51,7 @@ public class GroundDroneMotorAI : MonoBehaviour
         if (treeObject != null)
         {
             // Move the AI to the tree object
-            navMeshAgent.SetDestination(treeObject.position);
+            groundDroneNavMeshAgent.SetDestination(treeObject.position);
         }
     }
     public void ResetTrees()
