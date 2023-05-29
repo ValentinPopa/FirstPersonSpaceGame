@@ -23,6 +23,7 @@ public class PlayerInventory : MonoBehaviour
     public Text pickUpName;
     public Image pickUpImage;
 
+    public GameObject ItemInfoUI;
 
     private void Awake()
     {
@@ -123,5 +124,37 @@ public class PlayerInventory : MonoBehaviour
             }    
         }
         return false;
+    }
+
+    public void RemoveItem(string nameToRemove, int amountToRemove)
+    {
+        int counter = amountToRemove;
+        for(var i=slotList.Count-1;i>=0;i--)
+        {
+            if (slotList[i].transform.childCount>0)
+            {
+                if (slotList[i].transform.GetChild(0).name==nameToRemove+"(Clone)" && counter!=0)
+                {
+                    DestroyImmediate(slotList[i].transform.GetChild(0).gameObject);
+                    counter--;
+                }
+            }
+        }
+        ReCalculateList();
+        //CraftingSystem.Instance.RefreshNeededItems();
+    }
+    public void ReCalculateList()
+    {
+        itemList.Clear();
+        foreach(GameObject slot in slotList)
+        {
+            if(slot.transform.childCount>0)
+            {
+                string name=slot.transform.GetChild(0).name;
+                string str2 = "(Clone)";
+                string result = name.Replace(str2, "");
+                itemList.Add(result);
+            }
+        }
     }
 }

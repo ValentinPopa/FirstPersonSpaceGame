@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
-    public static PlayerState instance { get; set; }
+    public static PlayerState Instance { get; set; }
     public GameObject statusBarUI;
     //PlayerHealth
     public float currentHealth;
@@ -22,13 +22,13 @@ public class PlayerState : MonoBehaviour
 
     private void Awake()
     {
-        if(instance!=null && instance !=this)
+        if(Instance!=null && Instance !=this)
         {
             Destroy(gameObject);
         }
         else
         {
-            instance = this;
+            Instance = this;
         }
     }
 
@@ -57,5 +57,17 @@ public class PlayerState : MonoBehaviour
             distanceTraveled = 0;
             currentFood--;
         }
+    }
+    public void setHealth(float newHealth)
+    {
+        currentHealth = newHealth;
+    }
+    public void setFood(float newFood)
+    {
+        currentFood = newFood;
+    }
+    public void setWater(float newWater)
+    {
+        currentWater = newWater;
     }
 }
