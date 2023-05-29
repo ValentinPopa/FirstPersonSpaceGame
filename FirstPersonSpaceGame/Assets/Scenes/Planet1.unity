@@ -6384,6 +6384,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1446017922}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: TempSaveGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1021889155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7981,6 +7993,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 599623595320125817, guid: ecb99f8e9f88be343a56a7ff9b5f09b2, type: 3}
   m_PrefabInstance: {fileID: 1480429008009944241}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1446017922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446017921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5115ace654b16b24c91f7641c7d32a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuCanvas: {fileID: 1723405972}
+  uiCanvas: {fileID: 1425607761}
+  saveMenu: {fileID: 1411070405}
+  settingsMenu: {fileID: 30342958}
+  menu: {fileID: 1670295464}
+  isMenuOpened: 0
 --- !u!1 &1491151420
 GameObject:
   m_ObjectHideFlags: 0
@@ -9087,7 +9117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1723405973
 MonoBehaviour:
   m_ObjectHideFlags: 0

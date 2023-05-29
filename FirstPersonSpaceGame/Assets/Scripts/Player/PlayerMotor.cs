@@ -4,10 +4,23 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
+
+    public static PlayerMotor Instance { get; set; }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     private CharacterController controller;
     private Vector3 playerVelocity;
 
-    private GroundDroneMotor groundDroneMotor;
     public float speed = 5f;
     private bool isGrounded;
     public float gravity = -9.8f;
@@ -20,7 +33,6 @@ public class PlayerMotor : MonoBehaviour
     void Start()
     {
         controller=GetComponent<CharacterController>();
-        groundDroneMotor= gameObject.AddComponent<GroundDroneMotor>();
     }
 
     // Update is called once per frame
