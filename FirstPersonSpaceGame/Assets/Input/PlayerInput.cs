@@ -98,6 +98,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""6349de5e-fc68-4fcb-911c-7ccf79555a08"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -340,6 +349,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""DroneFollowing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b0b56e8-2969-4063-9643-1fca0fb34a25"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -874,6 +894,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_OnFoot_Interact = m_OnFoot.FindAction("Interact", throwIfNotFound: true);
         m_OnFoot_FindObjects = m_OnFoot.FindAction("FindObjects", throwIfNotFound: true);
         m_OnFoot_DroneFollowing = m_OnFoot.FindAction("DroneFollowing", throwIfNotFound: true);
+        m_OnFoot_Inventory = m_OnFoot.FindAction("Inventory", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -953,6 +974,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_Interact;
     private readonly InputAction m_OnFoot_FindObjects;
     private readonly InputAction m_OnFoot_DroneFollowing;
+    private readonly InputAction m_OnFoot_Inventory;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -965,6 +987,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_OnFoot_Interact;
         public InputAction @FindObjects => m_Wrapper.m_OnFoot_FindObjects;
         public InputAction @DroneFollowing => m_Wrapper.m_OnFoot_DroneFollowing;
+        public InputAction @Inventory => m_Wrapper.m_OnFoot_Inventory;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -998,6 +1021,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @DroneFollowing.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnDroneFollowing;
                 @DroneFollowing.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnDroneFollowing;
                 @DroneFollowing.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnDroneFollowing;
+                @Inventory.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnInventory;
+                @Inventory.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnInventory;
+                @Inventory.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnInventory;
             }
             m_Wrapper.m_OnFootActionsCallbackInterface = instance;
             if (instance != null)
@@ -1026,6 +1052,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @DroneFollowing.started += instance.OnDroneFollowing;
                 @DroneFollowing.performed += instance.OnDroneFollowing;
                 @DroneFollowing.canceled += instance.OnDroneFollowing;
+                @Inventory.started += instance.OnInventory;
+                @Inventory.performed += instance.OnInventory;
+                @Inventory.canceled += instance.OnInventory;
             }
         }
     }
@@ -1145,6 +1174,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnFindObjects(InputAction.CallbackContext context);
         void OnDroneFollowing(InputAction.CallbackContext context);
+        void OnInventory(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class PlayerInteract : MonoBehaviour
     private LayerMask mask;
     private PlayerUI playerUI;
     private InputManager inputManager;
+
+    public Image centerDotImage;
+    public Image HandImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +37,19 @@ public class PlayerInteract : MonoBehaviour
             {
                 Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
                 playerUI.UpdateText(interactable.promptMessage);
+                centerDotImage.gameObject.SetActive(false);
+                HandImage.gameObject.SetActive(true);
                 if (inputManager.onFoot.Interact.triggered)
                 {
                     interactable.BaseInteract();
                 }
             }
+            
+        }
+        else
+        {
+            centerDotImage.gameObject.SetActive(true);
+            HandImage.gameObject.SetActive(false);
         }
     }
 }

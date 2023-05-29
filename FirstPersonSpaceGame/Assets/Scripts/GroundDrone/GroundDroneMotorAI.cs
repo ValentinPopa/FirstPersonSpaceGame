@@ -6,14 +6,19 @@ public class GroundDroneMotorAI : MonoBehaviour
     public GameObject player;
     private NavMeshAgent groundDroneNavMeshAgent;
     public Transform treeObject;
-    private const float minDistance = 2f;
+    private const float minDistance = 5f;
     
 
     void Start()
     {
         groundDroneNavMeshAgent = GetComponent<NavMeshAgent>();
     }
-
+    private void Update()
+    {
+        Vector3 newY = groundDroneNavMeshAgent.transform.position;
+        newY.y = newY.y + 3;
+        groundDroneNavMeshAgent.transform.position = newY;
+    }
     public void FollowPlayer()
     {
         Vector3 directionToPlayer = player.transform.position - transform.position;
@@ -29,6 +34,7 @@ public class GroundDroneMotorAI : MonoBehaviour
         {
             groundDroneNavMeshAgent.SetDestination(player.transform.position);
         }
+
     }
     public void FindTree()
     {
