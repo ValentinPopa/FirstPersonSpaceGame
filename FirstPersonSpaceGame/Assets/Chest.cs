@@ -31,7 +31,6 @@ public class Chest : Interactable
     {
         chestOpened= false;
         PopulateSlotList();
-        Debug.Log(slotList.Count);
     }
 
     private void PopulateSlotList()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDroneController : MonoBehaviour
 {
@@ -8,10 +9,13 @@ public class PlayerDroneController : MonoBehaviour
     private InputManager inputManager;
     public GroundDroneMotorAI groundDroneMotorAI;
     private bool isFollowing = true;
-    private bool isFindingTrees = false;
+    private bool isFindingNPCS = false;
+    public Button saraButton;
+    public GameObject droneNPCSUI;
     void Start()
     {
         inputManager=GetComponent<InputManager>();
+        saraButton = droneNPCSUI.transform.Find("SaraButton").GetComponent<Button>();
     }
 
     // Update is called once per frame
@@ -19,18 +23,29 @@ public class PlayerDroneController : MonoBehaviour
     {
         if (isFollowing)
         {
-            groundDroneMotorAI.FollowPlayer();
-            
+            groundDroneMotorAI.FollowPlayer();            
         }
-        if (!isFindingTrees)
+        if (!isFindingNPCS)
         { 
-            groundDroneMotorAI.ResetTrees();
+            groundDroneMotorAI.ResetNPCS();
         }
         if (inputManager.onFoot.DroneFollowing.triggered)
         {
+            if (!isFindingNPCS)
+            {
+                droneNPCSUI.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                saraButton.onClick.AddListener(() =>
+                {
+                    string npcTag = "Sara";
+                    groundDroneMotorAI.FindNPCS(npcTag);
+                    droneNPCSUI.SetActive(false);
+                    Cursor.lockState = CursorLockMode.Locked;
+                });
+                
+            }
             isFollowing = !isFollowing;
-            isFindingTrees = !isFindingTrees;
-            groundDroneMotorAI.FindTree();
+            isFindingNPCS = !isFindingNPCS;
         }
     }
 }

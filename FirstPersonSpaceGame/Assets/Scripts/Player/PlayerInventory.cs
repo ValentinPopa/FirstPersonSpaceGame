@@ -24,7 +24,7 @@ public class PlayerInventory : MonoBehaviour
     public Image pickUpImage;
 
     public GameObject ItemInfoUI;
-
+    public List<string> itemsPickedUp;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -42,7 +42,6 @@ public class PlayerInventory : MonoBehaviour
         inputManager = GetComponent<InputManager>();
         //isFull = false;
         PopulateSlotList();
-        Debug.Log(slotList.Count);
     }
 
     private void PopulateSlotList()
@@ -76,6 +75,10 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddItemToInventory(string itemName)
     {
+        if(SaveManager.Instance.isLoading==false)
+        {
+            //sunet
+        }
         whichSlotToEquip = FindNextEmptySlot();
         itemToAdd=(GameObject)Instantiate(Resources.Load<GameObject>(itemName),whichSlotToEquip.transform.position,whichSlotToEquip.transform.rotation);
         itemToAdd.transform.SetParent(whichSlotToEquip.transform);        

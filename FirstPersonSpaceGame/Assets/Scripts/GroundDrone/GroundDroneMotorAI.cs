@@ -5,7 +5,7 @@ public class GroundDroneMotorAI : MonoBehaviour
 {
     public GameObject player;
     private NavMeshAgent groundDroneNavMeshAgent;
-    public Transform treeObject;
+    public Transform npcObject;
     private const float minDistance = 5f;
     
 
@@ -36,32 +36,32 @@ public class GroundDroneMotorAI : MonoBehaviour
         }
 
     }
-    public void FindTree()
+    public void FindNPCS(string npcTag)
     {
-        if (treeObject == null)
+        if (npcObject == null)
         {
-            // Find the closest tree object
-            GameObject[] trees = GameObject.FindGameObjectsWithTag("Tree");
+            // Find the npc
+            GameObject[] npcs = GameObject.FindGameObjectsWithTag(npcTag);
             float minDist = Mathf.Infinity;
-            foreach (GameObject tree in trees)
+            foreach (GameObject npc in npcs)
             {
-                float dist = Vector3.Distance(transform.position, tree.transform.position);
+                float dist = Vector3.Distance(transform.position,npc.transform.position);
                 if (dist < minDist)
                 {
                     minDist = dist;
-                    treeObject = tree.transform;
+                    npcObject = npc.transform;
                 }
             }
         }
 
-        if (treeObject != null)
+        if (npcObject != null)
         {
-            // Move the AI to the tree object
-            groundDroneNavMeshAgent.SetDestination(treeObject.position);
+            // Move the AI to the npc object
+            groundDroneNavMeshAgent.SetDestination(npcObject.position);
         }
     }
-    public void ResetTrees()
+    public void ResetNPCS()
     {
-        treeObject= null;
+        npcObject = null;
     }
 }

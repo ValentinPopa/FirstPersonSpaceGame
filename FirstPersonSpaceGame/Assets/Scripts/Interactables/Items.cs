@@ -33,7 +33,8 @@ public class Items : Interactable
             if (!PlayerInventory.Instance.CheckIfFull())
             {
                 PlayerInventory.Instance.AddItemToInventory(itemName);
-                itemRenderer.material.color = baseColor;        
+                itemRenderer.material.color = baseColor;
+                PlayerInventory.Instance.itemsPickedUp.Add(item.name);
                 Destroy(item);
             }
             else

@@ -15,7 +15,7 @@ public class PlayerState : MonoBehaviour
     float distanceTraveled=0;
     Vector3 lastPosition;
     public GameObject player;
-    //PlayeWater
+    //PlayerWater
     public float currentWater;
     public float maxWater;
     public bool isWaterTriggered=true;
@@ -29,7 +29,8 @@ public class PlayerState : MonoBehaviour
         else
         {
             Instance = this;
-        }
+           
+        }       
     }
 
     private void Start()
