@@ -15,7 +15,7 @@ public class PlayerLook : MonoBehaviour
     // Start is called before the first frame update
     public void ProcessLook(Vector2 input)
     {
-        if (!PlayerInventory.Instance.inventoryOpened && !Chest.Instance.chestOpened && !MenuManager.Instance.isMenuOpened) 
+        if (!PlayerInventory.Instance.inventoryOpened && !Chest.Instance.chestOpened && !MenuManager.Instance.isMenuOpened && !PlayerDroneController.Instance.isFindNPCSMenuOpened) 
         { 
             float mouseX = input.x;
             float mouseY = input.y;

@@ -10,7 +10,7 @@ public class DialogSystem : MonoBehaviour
     public TextMeshProUGUI dialogText;
     public Button optionBTN1;
     public Button optionBTN2;
-    public Canvas dialogUI;
+    public GameObject dialogUI;
     public bool dialogOpened;
 
     private void Awake()
@@ -27,14 +27,14 @@ public class DialogSystem : MonoBehaviour
 
     public void OpenDialogUI()
     {
-        dialogUI.gameObject.SetActive(true);
+        dialogUI.SetActive(true);
         dialogOpened = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
     public void CloseDialogUI()
     {
-        dialogUI.gameObject.SetActive(false);
+        dialogUI.SetActive(false);
         dialogOpened = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
