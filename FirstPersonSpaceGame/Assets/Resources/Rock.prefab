@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTrashable: 1
+  isQuestItem: 1
   thisName: Rock
   thisDescription: This is a rock
   thisFunctionality: Beat it

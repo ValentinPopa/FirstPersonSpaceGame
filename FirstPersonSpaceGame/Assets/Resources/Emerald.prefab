@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTrashable: 0
+  isQuestItem: 1
   thisName: Emerald
   thisDescription: This is a very precious gem
   thisFunctionality: Used in quests

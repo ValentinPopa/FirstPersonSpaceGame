@@ -8,7 +8,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     // --- Is this item trashable --- //
     public bool isTrashable;
-
+    public bool isQuestItem;
     // --- Item Info UI --- //
     private GameObject itemInfoUI;
 
