@@ -69,9 +69,6 @@ public class VerifyQuestItem : MonoBehaviour, IDropHandler, IPointerEnterHandler
     IEnumerator notifyBeforeVerification()
     {
         verifyQuestItemUI.SetActive(true);
-        print(questItem.text);
-        print(itemName);
-        print(npcName.text);
         if(itemName==questItem.text)
         {
             textToModify.text = "Press complete to complete the quest!";
@@ -105,6 +102,7 @@ public class VerifyQuestItem : MonoBehaviour, IDropHandler, IPointerEnterHandler
 
         if (obj != null)
         {
+            EscapePlanet.Instance.npcDespawned.Add(npcName.text);
             Destroy(obj);
         }
         else

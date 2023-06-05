@@ -6,6 +6,7 @@ public class EnviromentManager : MonoBehaviour
 {
     public static EnviromentManager Instance { get; set; }
     public GameObject allItems;
+    public GameObject allNPCS;
     private void Awake()
     {
         if (Instance != null && Instance != this)

@@ -92,7 +92,7 @@ public class NPC : Interactable
     public void OpenQuestUI()
     {
         questUI.SetActive(true);
-        questText.text = "You have to bring me a ";
+        questText.text = "You have to bring me the following item:";
         questItem.text = questItemName;
         npcName.text = NPCName;
     }

@@ -199,7 +199,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6570748
 GameObject:
@@ -239,6 +239,38 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00022888184, y: 0.00015258789}
   m_SizeDelta: {x: 0.8200073, y: -0.112000465}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &21002275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 21002276}
+  m_Layer: 6
+  m_Name: Crates
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &21002276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21002275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1394620773}
+  m_Father: {fileID: 1298403685}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &21918619
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,8 +497,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 243}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 2.8871, y: 121.69455}
+  m_SizeDelta: {x: 411.029, y: 442.3524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &24942826
 MonoBehaviour:
@@ -615,19 +647,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Ruby. Are you willing
+    to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Ruby
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Nety1
 --- !u!136 &27984960
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -744,6 +777,124 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadGameBTN: {fileID: 0}
+--- !u!1 &33490606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33490607}
+  m_Layer: 6
+  m_Name: Ruby
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &33490607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33490606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1703050644}
+  m_Father: {fileID: 1298403685}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &33985097
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 590639477}
+    m_Modifications:
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -669.2694
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -521.67566
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -421.09863
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759784369, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_Name
+      value: Saw_0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 373167418759784369, guid: 65364203934264348b2aa18aac81b750, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65364203934264348b2aa18aac81b750, type: 3}
+--- !u!4 &33985098 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 373167418759625617, guid: 65364203934264348b2aa18aac81b750, type: 3}
+  m_PrefabInstance: {fileID: 33985097}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &33985099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 373167418759784369, guid: 65364203934264348b2aa18aac81b750, type: 3}
+  m_PrefabInstance: {fileID: 33985097}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &33985100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33985099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510570fa718b5754483791cac3262cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Press E to pick up
+  item: {fileID: 33985099}
+  itemName: Saw
 --- !u!1 &38996210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,19 +1530,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Sapphire. Are you
+    willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Sapphire
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Arizona1
 --- !u!136 &111188924
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1741,19 +1893,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Crate. Are you willing
+    to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Crate
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Darius1
 --- !u!136 &119827265
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2240,7 +2393,7 @@ Transform:
   m_Children:
   - {fileID: 1732594623}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &161663528
 GameObject:
@@ -2591,7 +2744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8004870786121596540, guid: c53e58c59cba20e4ab6f2080fbdafb5f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8004870786121596540, guid: c53e58c59cba20e4ab6f2080fbdafb5f, type: 3}
       propertyPath: m_LocalScale.x
@@ -2842,6 +2995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allItems: {fileID: 1298403684}
+  allNPCS: {fileID: 1400565453}
 --- !u!4 &201285753
 Transform:
   m_ObjectHideFlags: 0
@@ -2856,7 +3010,7 @@ Transform:
   m_Children:
   - {fileID: 1298403685}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &212397198
 GameObject:
@@ -3135,19 +3289,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Saw. Are you willing
+    to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Saw
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Nidus2
 --- !u!136 &221815378
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3436,7 +3591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: afa34a8748c82294d8c76c0493fcdd59, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: afa34a8748c82294d8c76c0493fcdd59, type: 3}
       propertyPath: m_LocalScale.x
@@ -3839,6 +3994,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285181650}
   m_CullTransparentMesh: 1
+--- !u!1 &290562086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7962199819078159310, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+  m_PrefabInstance: {fileID: 1178892617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &290562087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290562086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f738595137cf594d81ce3c2e8babc17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1446017921}
+--- !u!195 &290562090
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290562086}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &292598159
 GameObject:
   m_ObjectHideFlags: 0
@@ -4423,14 +4618,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382382952}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 21.47994}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1806936243}
-  m_Father: {fileID: 1400565454}
-  m_RootOrder: 22
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4887,7 +5082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &400365799
 GameObject:
@@ -6571,19 +6766,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Branch. Are you
+    willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Branch
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: John1
 --- !u!136 &573664070
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6811,7 +7007,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579577799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 7, z: 50}
+  m_LocalPosition: {x: 42.9, y: 7, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6899,7 +7095,7 @@ MonoBehaviour:
   isTalking: 0
   dialogText: {fileID: 24942826}
   dialogTextString: Hello there! I will need your help finding a Rock. Are you willing
-    to help me!
+    to help me?
   optionBTN1: {fileID: 833639808}
   optionBTN2: {fileID: 611350605}
   dialogUI: {fileID: 382382952}
@@ -7046,6 +7242,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586627591}
   m_CullTransparentMesh: 1
+--- !u!1 &590639476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590639477}
+  m_Layer: 6
+  m_Name: Saw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &590639477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590639476}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 33985098}
+  m_Father: {fileID: 1298403685}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &609256419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7059,7 +7287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 501295248943452728, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 501295248943452728, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7140,7 +7368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -54}
+  m_AnchoredPosition: {x: 0, y: -264}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &611350605
@@ -7599,6 +7827,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635473807}
   m_CullTransparentMesh: 1
+--- !u!1 &635505535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 635505536}
+  m_Layer: 6
+  m_Name: Sapphires
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &635505536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635505535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1278298152}
+  m_Father: {fileID: 1298403685}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -8464,7 +8724,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7234606675617560397, guid: b219ec120eefaf54896fb330e6a84dd5, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7234606675617560397, guid: b219ec120eefaf54896fb330e6a84dd5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9055,7 +9315,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: -177}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &833639808
@@ -9750,19 +10010,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Branch. Are you
+    willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Branch
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: John2
 --- !u!136 &966809715
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10293,8 +10554,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.8465, y: 0}
-  m_SizeDelta: {x: 475.1079, y: 71.8888}
+  m_AnchoredPosition: {x: 9.8465, y: -16.824}
+  m_SizeDelta: {x: 475.1079, y: 105.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024826211
 MonoBehaviour:
@@ -10552,19 +10813,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Bottle of Water.
+    Are you willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Water
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Ginger2
 --- !u!136 &1038911432
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10659,7 +10921,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1054546380
 MonoBehaviour:
@@ -10706,7 +10968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073416213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 7, z: 38.3}
+  m_LocalPosition: {x: 5, y: 7, z: -13.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10729,8 +10991,8 @@ MonoBehaviour:
   interacted: 0
   isTalking: 0
   dialogText: {fileID: 24942826}
-  dialogTextString: Hello there! I will need an Emerald in order to make a potion.
-    WIll you get it for me?
+  dialogTextString: Hello there! I will need your help finding an Emerald. Are you
+    willing to help me?
   optionBTN1: {fileID: 833639808}
   optionBTN2: {fileID: 611350605}
   dialogUI: {fileID: 382382952}
@@ -10740,8 +11002,8 @@ MonoBehaviour:
   questText: {fileID: 1024826211}
   questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Lulu1
 --- !u!136 &1073416216
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11290,6 +11552,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49f04f4a2a7a1f46bbb95a5408b46c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1178892617
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 140.46344
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 86.21474
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.20552275
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.97865236
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -203.71999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7962199819078159310, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+      propertyPath: m_Name
+      value: Bear_4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
 --- !u!1 &1179542969
 GameObject:
   m_ObjectHideFlags: 0
@@ -11833,19 +12152,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Lantern. Are you
+    willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Lantern
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Leona2
 --- !u!136 &1214139834
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12051,19 +12371,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Sapphire. Are you
+    willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Sapphire
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Arizona2
 --- !u!136 &1237968032
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12656,8 +12977,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2060785551}
-  m_Father: {fileID: 1400565454}
-  m_RootOrder: 23
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12725,6 +13046,92 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &1278298151
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 635505536}
+    m_Modifications:
+    - target: {fileID: 3761745242275073796, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_Name
+      value: Sapphire_0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275073796, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -673.98376
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -521.6544
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -418.23227
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 305a388b6539d3041a283b76508de030, type: 3}
+--- !u!4 &1278298152 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3761745242275304228, guid: 305a388b6539d3041a283b76508de030, type: 3}
+  m_PrefabInstance: {fileID: 1278298151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1278298153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3761745242275073796, guid: 305a388b6539d3041a283b76508de030, type: 3}
+  m_PrefabInstance: {fileID: 1278298151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1278298154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278298153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510570fa718b5754483791cac3262cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Press E to pick up
+  item: {fileID: 1278298153}
+  itemName: Sapphire
 --- !u!1 &1298403684
 GameObject:
   m_ObjectHideFlags: 0
@@ -12759,6 +13166,11 @@ Transform:
   - {fileID: 1179542970}
   - {fileID: 2072688633}
   - {fileID: 1373475973}
+  - {fileID: 33490607}
+  - {fileID: 21002276}
+  - {fileID: 2002316735}
+  - {fileID: 635505536}
+  - {fileID: 590639477}
   m_Father: {fileID: 201285753}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13202,19 +13614,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Crate. Are you willing
+    to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Crate
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Darius2
 --- !u!136 &1343551696
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13564,19 +13977,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Ruby. Are you willing
+    to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Ruby
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Nety2
 --- !u!136 &1357734742
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13954,6 +14368,92 @@ MonoBehaviour:
   inventoryScreenUI: {fileID: 1024529026}
   slotList: []
   itemList: []
+--- !u!1001 &1394620772
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 21002276}
+    m_Modifications:
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -676.3123
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -521.44183
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -417.50952
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639809188, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_Name
+      value: Crate_0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908298206639809188, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+--- !u!4 &1394620773 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5908298206639324804, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+  m_PrefabInstance: {fileID: 1394620772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1394620774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5908298206639809188, guid: ddfe2f3727fa5674c85fddf07b08771c, type: 3}
+  m_PrefabInstance: {fileID: 1394620772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1394620775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394620774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510570fa718b5754483791cac3262cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Press E to pick up
+  item: {fileID: 1394620774}
+  itemName: Crate
 --- !u!1 &1397580001
 GameObject:
   m_ObjectHideFlags: 0
@@ -14139,10 +14639,8 @@ Transform:
   - {fileID: 1443298054}
   - {fileID: 119827263}
   - {fileID: 1343551694}
-  - {fileID: 382382956}
-  - {fileID: 1277562929}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1406975701
 PrefabInstance:
@@ -14559,7 +15057,7 @@ RectTransform:
   - {fileID: 1782050069}
   - {fileID: 1625792707}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14704,19 +15202,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding an Emerald. Are you
+    willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Emerald
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Lulu2
 --- !u!136 &1443298056
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15164,19 +15663,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding an Iron. Are you willing
+    to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Iron
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Andrew1
 --- !u!136 &1503673099
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15726,19 +16226,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Rock. Are you willing
+    to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Rock
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Sara2
 --- !u!136 &1522355099
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16684,19 +17185,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a BigMushroom. Are
+    you willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: BigMushroom
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Duky1
 --- !u!136 &1613445410
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16888,19 +17390,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding an Iron. Are you willing
+    to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Iron
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Andrew2
 --- !u!136 &1627002316
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17499,19 +18002,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a BigMushroom. Are
+    you willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: BigMushroom
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Duky2
 --- !u!136 &1658067890
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17896,19 +18400,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Bottle of Water.
+    Are you willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Water
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Ginger1
 --- !u!136 &1690298028
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18187,6 +18692,92 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699945459}
   m_CullTransparentMesh: 1
+--- !u!1001 &1703050643
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 33490607}
+    m_Modifications:
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -675.92926
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -521.6999
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -420.38324
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086457075563, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_Name
+      value: Ruby_0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 439726086457075563, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+--- !u!4 &1703050644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 439726086456654667, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+  m_PrefabInstance: {fileID: 1703050643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1703050645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 439726086457075563, guid: 9de82d5e406d9d544ac387c521e08a2f, type: 3}
+  m_PrefabInstance: {fileID: 1703050643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1703050646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703050645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510570fa718b5754483791cac3262cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Press E to pick up
+  item: {fileID: 1703050645}
+  itemName: Ruby
 --- !u!1 &1723405972
 GameObject:
   m_ObjectHideFlags: 0
@@ -18281,7 +18872,7 @@ RectTransform:
   m_Children:
   - {fileID: 322358431}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -19104,19 +19695,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Saw. Are you willing
+    to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Saw
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Nidus1
 --- !u!136 &1784981600
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19421,19 +20013,20 @@ MonoBehaviour:
   promptMessage: Press E to Talk
   interacted: 0
   isTalking: 0
-  dialogText: {fileID: 0}
-  dialogTextString: 
-  optionBTN1: {fileID: 0}
-  optionBTN2: {fileID: 0}
-  dialogUI: {fileID: 0}
+  dialogText: {fileID: 24942826}
+  dialogTextString: Hello there! I will need your help finding a Lantern. Are you
+    willing to help me?
+  optionBTN1: {fileID: 833639808}
+  optionBTN2: {fileID: 611350605}
+  dialogUI: {fileID: 382382952}
   dialogOpened: 0
-  questUI: {fileID: 0}
-  questItemName: 
-  questText: {fileID: 0}
-  questItem: {fileID: 0}
+  questUI: {fileID: 1277562928}
+  questItemName: Lantern
+  questText: {fileID: 1024826211}
+  questItem: {fileID: 1541340108}
   questCompleted: 0
-  npcName: {fileID: 0}
-  NPCName: 
+  npcName: {fileID: 1478606217}
+  NPCName: Leona1
 --- !u!136 &1812439580
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19610,9 +20203,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: Press E to interact
   button: {fileID: 1830237555}
-  questsNeeded: 10
+  questsNeeded: 5
   questsCompleted: 0
   numberOfQuestsInfoUI: {fileID: 1625792706}
+  npcDespawned: []
 --- !u!1 &1840901840
 GameObject:
   m_ObjectHideFlags: 0
@@ -19735,6 +20329,92 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840901840}
   m_CullTransparentMesh: 1
+--- !u!1001 &1866284496
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2002316735}
+    m_Modifications:
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -672.7114
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -521.6033
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -421.03122
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413514334, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_Name
+      value: Lantern_0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413659883413514334, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+--- !u!4 &1866284497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7413659883413353598, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+  m_PrefabInstance: {fileID: 1866284496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1866284498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7413659883413514334, guid: 9380f34c10f5fe34e863c769353585c0, type: 3}
+  m_PrefabInstance: {fileID: 1866284496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866284499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866284498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510570fa718b5754483791cac3262cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Press E to pick up
+  item: {fileID: 1866284498}
+  itemName: Lantern
 --- !u!1 &1892718667
 GameObject:
   m_ObjectHideFlags: 0
@@ -20510,6 +21190,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986067330}
   m_CullTransparentMesh: 1
+--- !u!1 &2002316734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2002316735}
+  m_Layer: 6
+  m_Name: Lanterns
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2002316735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002316734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1866284497}
+  m_Father: {fileID: 1298403685}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2012947932
 GameObject:
   m_ObjectHideFlags: 0
@@ -21693,7 +22405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8322767121337116549, guid: ecb99f8e9f88be343a56a7ff9b5f09b2, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8322767121337116549, guid: ecb99f8e9f88be343a56a7ff9b5f09b2, type: 3}
       propertyPath: m_LocalPosition.x

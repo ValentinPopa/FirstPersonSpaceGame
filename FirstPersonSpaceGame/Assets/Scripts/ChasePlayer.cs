@@ -17,11 +17,11 @@ public class ChasePlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         Vector3 directionToPlayer = player.transform.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
-        if(distanceToPlayer<=distance)
+        if (distanceToPlayer <= distance)
         {
             bearNavMeshAgent.SetDestination(player.transform.position);
         }
@@ -29,9 +29,10 @@ public class ChasePlayer : MonoBehaviour
         {
             bearNavMeshAgent.SetDestination(spawnLocation);
         }
-        if(distanceToPlayer<=3)
+        if (distanceToPlayer <= 3)
         {
-            PlayerState.Instance.currentHealth -= 5;
+            PlayerState.Instance.currentHealth -= 1;
         }
     }
+
 }

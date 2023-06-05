@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 using System;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,6 +16,7 @@ public class EscapePlanet : Interactable
     public int questsCompleted;
     public GameObject numberOfQuestsInfoUI;
     private Text textToModify;
+    public List<string> npcDespawned;
 
     private void Awake()
     {

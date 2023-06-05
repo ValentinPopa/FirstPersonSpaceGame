@@ -7,16 +7,12 @@ public class Items : Interactable
     // Start is called before the first frame update
     [SerializeField]
     private GameObject item;
-    private Renderer itemRenderer;
-    private Color baseColor;
     private bool interacted = false;
     public string itemName;
 
 
     void Start()
     {
-        itemRenderer = item.GetComponent<Renderer>();
-        baseColor = itemRenderer.material.color;
     }
 
     // Update is called once per frame
@@ -33,7 +29,6 @@ public class Items : Interactable
             if (!PlayerInventory.Instance.CheckIfFull())
             {
                 PlayerInventory.Instance.AddItemToInventory(itemName);
-                itemRenderer.material.color = baseColor;
                 PlayerInventory.Instance.itemsPickedUp.Add(item.name);
                 Destroy(item);
             }

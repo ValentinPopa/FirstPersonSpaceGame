@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using UnityEditor.Experimental.RestService;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -50,7 +48,8 @@ public class SaveManager : MonoBehaviour
     private EnviromentData GetEnviromentData()
     {
         List<string> itemsPickedUp = PlayerInventory.Instance.itemsPickedUp;
-        return new EnviromentData(itemsPickedUp);
+        List<string> npcDespawned = EscapePlanet.Instance.npcDespawned;
+        return new EnviromentData(itemsPickedUp,npcDespawned);
     }
 
     private PlayerData GetPlayerData()
@@ -70,7 +69,10 @@ public class SaveManager : MonoBehaviour
         playerPosAndRot[5] = PlayerState.Instance.player.transform.rotation.z;
 
         string[] inventory=PlayerInventory.Instance.itemList.ToArray();
-        return new PlayerData(playerStats, playerPosAndRot, inventory);
+
+        int questsCompleted = EscapePlanet.Instance.questsCompleted;
+
+        return new PlayerData(playerStats, playerPosAndRot, inventory, questsCompleted);
     }
     public void SavingTypeSwitch(AllGameData gameData,int slotNumber)
     {
@@ -120,6 +122,13 @@ public class SaveManager : MonoBehaviour
                 }
             }
         }
+        foreach(Transform npcs in EnviromentManager.Instance.allNPCS.transform)
+        {           
+               if(enviromentData.npcDespawned.Contains(npcs.name))
+                {
+                    Destroy(npcs.gameObject);
+                }
+        }
         PlayerInventory.Instance.itemsPickedUp = enviromentData.pickedUpItems;
     }
 
@@ -150,6 +159,8 @@ public class SaveManager : MonoBehaviour
         {
             PlayerInventory.Instance.AddItemToInventory(item);
         }
+
+        EscapePlanet.Instance.questsCompleted=playerData.questsCompleted;
 
     }
     public void StartLoadedGame(int slotNumber)

@@ -4,8 +4,10 @@
 public class EnviromentData
 {
     public List<string> pickedUpItems;
-    public EnviromentData(List<string> _pickedUpItems) 
+    public List<string> npcDespawned;
+    public EnviromentData(List<string> _pickedUpItems, List<string> _npcDespawned) 
     {
         pickedUpItems= _pickedUpItems;
+        npcDespawned = _npcDespawned;
     }
 }

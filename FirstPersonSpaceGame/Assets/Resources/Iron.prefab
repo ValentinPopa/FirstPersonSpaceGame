@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTrashable: 0
+  isQuestItem: 1
   thisName: Iron
   thisDescription: This is an iron ore
   thisFunctionality: Used in quests
